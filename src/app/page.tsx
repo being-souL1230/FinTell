@@ -100,7 +100,7 @@ function LandingContent({ lang }: { lang: LangCode }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2.5 group">
             <img
-              src="/fintell-logo.png"
+              src="/images/fintell-logo.png"
               alt="FinTell Logo"
               className="h-9 w-9 object-contain drop-shadow-xs transition group-hover:scale-105"
             />
@@ -511,7 +511,7 @@ function LandingContent({ lang }: { lang: LangCode }) {
       <footer className="border-t border-slate-200 py-10 bg-white text-slate-500 text-xs">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <img src="/fintell-logo.png" alt="FinTell Logo" className="h-6 w-6 object-contain" />
+            <img src="/images/fintell-logo.png" alt="FinTell Logo" className="h-6 w-6 object-contain" />
             <span className="font-black text-slate-900">FinTell AI Financial Guardian</span>
           </div>
 

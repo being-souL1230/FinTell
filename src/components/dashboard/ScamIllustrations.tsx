@@ -7,7 +7,7 @@ export function ScamHeroIllustration({ className = "w-full h-[220px] sm:h-[260px
   const [activeIdx, setActiveIdx] = React.useState(0);
 
   const images = React.useMemo(
-    () => ["/scam-safety-2.webp?v=10", "/scam-safety.webp?v=10"],
+    () => ["/images/scam-safety-2.webp?v=10", "/images/scam-safety.webp?v=10"],
     []
   );
 
@@ -88,7 +88,7 @@ export function UpiChannelIcon({ className = "w-5 h-5" }: { className?: string }
 export function InvestTutorialIllustration({ className = "w-full h-[220px] sm:h-[260px] lg:h-[280px] object-contain" }: { className?: string }) {
   return (
     <img
-      src="/investment-safety.webp"
+      src="/images/investment-safety.webp"
       alt="Investment Safety Tutorial Illustration"
       className={className}
     />
