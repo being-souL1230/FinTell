@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Scale,
   CheckCircle2,
@@ -59,24 +59,24 @@ const SAMPLE_RECON: ReconItem[] = [
     vendor: "State Electricity Board",
     gstin: "27SEB123456789",
     invoiceAmount: 1250,
-    difference: 1250,
+    difference: 0,
     status: "DUPLICATE",
-    aiExplanation: "Multiple debit entries (₹1,250) recorded for the same electricity bill reference.",
-    actionRequired: "Review duplicate payout with bank for chargeback.",
+    aiExplanation: "Possible duplicate entry! Electricity bill of ₹1,250 paid twice within 48 hours.",
+    actionRequired: "Verify bank statement entry #8821.",
   },
   {
     id: "rec-3",
-    bankDate: "2026-08-16",
-    bankDesc: "IMPS-GLOBAL TECH VENDOR",
-    bankAmount: 28000,
-    invoiceNo: "INV-GT-501",
-    vendor: "Global Tech Services",
-    gstin: "27INVALIDGSTIN",
-    invoiceAmount: 29500,
-    difference: -1500,
+    bankDate: "2026-08-19",
+    bankDesc: "CHEQUE-METRO HARDWARE",
+    bankAmount: 6450,
+    invoiceNo: "REC-9912",
+    vendor: "Metro Hardware Traders",
+    gstin: "NOT_FOUND",
+    invoiceAmount: 6450,
+    difference: 0,
     status: "GST_MISMATCH",
-    aiExplanation: "Invoice tax rate calculated as 18% (₹4,500), but bank payout was sent excluding tax.",
-    actionRequired: "Correct invoice GSTIN and issue credit note for ₹1,500 difference.",
+    aiExplanation: "GSTIN missing on invoice exceeding ₹5,000 threshold. Input Tax Credit cannot be claimed.",
+    actionRequired: "Request GST Tax Invoice from vendor.",
   },
   {
     id: "rec-4",
@@ -100,14 +100,39 @@ export default function ReconcilePage() {
   const [selectedItem, setSelectedItem] = useState<ReconItem | null>(null);
   const [reconciledCount, setReconciledCount] = useState<number>(0);
 
+  // Load persistent reconciliation items on mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("fintell_reconcile_items");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setItems(parsed);
+          setSelectedItem(parsed[0]);
+        }
+      }
+    } catch (e) {
+      console.error("Error loading reconciliation data from storage:", e);
+    }
+  }, []);
+
+  const saveReconItems = (newItems: ReconItem[]) => {
+    setItems(newItems);
+    try {
+      localStorage.setItem("fintell_reconcile_items", JSON.stringify(newItems));
+    } catch (e) {
+      console.error("Error saving reconciliation data to storage:", e);
+    }
+  };
+
   const loadDemoData = () => {
-    setItems(SAMPLE_RECON);
+    saveReconItems(SAMPLE_RECON);
     setSelectedItem(SAMPLE_RECON[1]);
     setReconciledCount(1);
   };
 
   const clearData = () => {
-    setItems([]);
+    saveReconItems([]);
     setSelectedItem(null);
     setReconciledCount(0);
   };
@@ -118,13 +143,13 @@ export default function ReconcilePage() {
   });
 
   const handleResolve = (id: string) => {
-    setItems((prev) =>
-      prev.map((i) =>
-        i.id === id ? { ...i, status: "MATCHED", difference: 0, actionRequired: "Manually resolved & matched." } : i
-      )
+    const updated = items.map((i) =>
+      i.id === id ? { ...i, status: "MATCHED" as const, difference: 0, actionRequired: "Manually resolved & matched." } : i
     );
+    saveReconItems(updated);
     setReconciledCount((c) => c + 1);
   };
+
 
   const totalDiscrepancy = items.reduce((acc, curr) => acc + Math.abs(curr.difference), 0);
 

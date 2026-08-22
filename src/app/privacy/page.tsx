@@ -236,15 +236,15 @@ export default function PrivacyPolicyPage() {
         {/* SECTION 10 */}
         <section className="bg-white border border-slate-200 p-6 sm:p-8 space-y-3">
           <h2 className="text-lg font-black text-slate-950 border-b border-slate-100 pb-2">
-            10. Privacy Enquiries &amp; Contact
+            10. Privacy Support &amp; Feedback
           </h2>
           <p className="text-xs text-slate-600 leading-relaxed font-medium">
-            If you have questions, concerns, or requests regarding this Privacy Policy or your data rights, please reach out to our Privacy Office:
+            If you have any questions, feedback, or data privacy enquiries regarding FinTell, please reach out to our team via the built-in AI Financial Assistant or contact our support desk:
           </p>
-          <div className="bg-slate-50 p-4 border border-slate-200 text-xs font-mono text-slate-800 space-y-1">
-            <p><strong>FinTell Privacy &amp; Data Protection Office</strong></p>
-            <p>Email: privacy@fintell.app</p>
-            <p>Compliance: DPDP Act 2023 &amp; Information Technology Act 2000</p>
+          <div className="bg-slate-50 p-4 border border-slate-200 text-xs font-sans text-slate-800 space-y-1.5 font-medium">
+            <p className="font-bold text-slate-950">FinTell Support &amp; Privacy Desk</p>
+            <p className="text-slate-600">For security assistance, privacy questions, or data management queries, visit the AI Financial Assistant within your dashboard or email us directly.</p>
+            <p className="text-lime-700 font-mono text-[11px] pt-1">Support Email: support@fintell.app</p>
           </div>
         </section>
 

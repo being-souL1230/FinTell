@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { UploadCloud, FileSpreadsheet, AlertTriangle, CheckCircle2, Sparkles, Filter, CreditCard, ShoppingBag, Utensils, Zap, Car, ArrowUpRight, Upload } from "lucide-react";
 
 interface Transaction {
@@ -27,17 +27,42 @@ export function StatementAnalyzer() {
   const [filterCategory, setFilterCategory] = useState<string>("ALL");
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
+  // Load persistent transactions on initial render
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("fintell_statement_txns");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setTransactions(parsed);
+        }
+      }
+    } catch (e) {
+      console.error("Error loading transactions from storage:", e);
+    }
+  }, []);
+
+  const saveTxnsState = (newTxns: Transaction[]) => {
+    setTransactions(newTxns);
+    try {
+      localStorage.setItem("fintell_statement_txns", JSON.stringify(newTxns));
+    } catch (e) {
+      console.error("Error saving transactions to storage:", e);
+    }
+  };
+
   const handleTriggerUpload = () => {
     fileInputRef.current?.click();
   };
 
   const loadSample = () => {
-    setTransactions(SAMPLE_TRANSACTIONS);
+    saveTxnsState(SAMPLE_TRANSACTIONS);
   };
 
   const clearData = () => {
-    setTransactions([]);
+    saveTxnsState([]);
   };
+
 
   const handleRealCsvUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -146,7 +171,7 @@ export function StatementAnalyzer() {
         });
       }
 
-      setTransactions(parsedTxns);
+      saveTxnsState(parsedTxns);
     };
 
     reader.readAsText(file);
