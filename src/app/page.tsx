@@ -564,6 +564,7 @@ function LandingContent({ lang }: { lang: LangCode }) {
           </p>
 
           <div className="flex items-center gap-4 text-slate-600 font-bold">
+            <Link href="/privacy" className="hover:text-slate-950">Privacy Policy</Link>
             <Link href="/login" className="hover:text-slate-950">Sign In</Link>
             <Link href="/register" className="hover:text-slate-950">Register</Link>
           </div>
