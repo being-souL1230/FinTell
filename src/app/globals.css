@@ -9,11 +9,49 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: default;
 }
 
 body {
   font-family: var(--font-sans);
-  background: #fcfdf6;
+  background: #ffffff;
+  cursor: default;
+}
+
+/* Restrict text typing cursor STRICTLY to input fields & textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+[contenteditable="true"],
+.selectable-text {
+  cursor: text !important;
+}
+
+/* Ensure buttons, links, and interactive controls always show pointer cursor */
+a,
+button,
+[role="button"],
+select,
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Disable unwanted text selection on UI controls */
+button,
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 * {
