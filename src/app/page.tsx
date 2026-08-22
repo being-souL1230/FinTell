@@ -104,14 +104,10 @@ function LandingContent({ lang }: { lang: LangCode }) {
               alt="FinTell 3D Logo"
               className="h-10 w-10 object-contain drop-shadow-md transition group-hover:scale-105"
             />
-            <div>
-              <span className="text-xl font-black tracking-tight text-slate-950 flex items-center gap-1.5">
-                FinTell <span className="text-lime-600 font-extrabold text-sm">AI</span>
-              </span>
-              <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest leading-none">
-                Financial Guardian
-              </p>
-            </div>
+            <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-950">
+              FinTell
+            </span>
+
           </Link>
 
           <div className="flex items-center gap-3">
