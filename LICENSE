@@ -27,7 +27,7 @@ c. Distribution and Public Display: You shall not distribute, publish, host, sub
 d. Commercial Use: You shall not use this Software, its algorithms, UI components, AI prompts, or business logic for any commercial purpose, commercial product, Software-as-a-Service (SaaS), API service, enterprise deployment, or monetization effort.
 e. Reverse Engineering and Extraction: You shall not reverse engineer, decompile, disassemble, extract, decrypt, or attempt to derive the source code, database structures, or AI guardrails contained within the Software.
 f. Brand and Trademark Misappropriation: You shall not use the name "FinTell", FinTell logos, trademarks, service marks, or branding in any manner that creates confusion or implies endorsement without prior written consent.
-g. Hackathon and Competition Mirroring: You shall not submit, present, publish, or enter this Software, its source code, or any derivative version into any hackathon, competition, academic project, or public showcase under any name other than the original authoring team.
+g. Uncredited Competition Mirroring: You shall not submit, present, publish, or enter this Software, its source code, or any derivative version into any other competition under any name other than the original authoring team.
 
 ---
 
@@ -45,13 +45,23 @@ In the event of a breach of this Agreement, FinTell reserves the right to seek a
 
 ---
 
-5. DISCLAIMER OF WARRANTY
+5. SPECIAL EXEMPTION & LICENSING FOR PRASUNATHON 2.0 / PRASUNET
+
+Notwithstanding any other provision in this Agreement, explicit, full, and irrevocable rights and permissions are hereby granted to Prasunathon 2.0, Prasunet, their organizers, judges, evaluators, and affiliated platforms to:
+
+a. Access, review, evaluate, test, compile, run, and benchmark the Software for the purposes of judging, evaluation, scoring, and exhibition in Prasunathon 2.0.
+b. Feature, showcase, highlight, archive, and publish demonstrations, screenshots, recordings, code snippets, and write-ups of the Software across official Prasunathon 2.0 and Prasunet media channels, websites, social media, publications, and promotional materials.
+c. Retain, host, and display the submission entry within official Prasunathon 2.0 archive records and platform repositories.
+
+---
+
+6. DISCLAIMER OF WARRANTY
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR SYSTEM COMPATIBILITY. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-6. GOVERNING LAW & JURISDICTION
+7. GOVERNING LAW & JURISDICTION
 
 This Agreement and any disputes arising out of or in connection with it shall be governed by, construed, and enforced in accordance with applicable laws governing intellectual property, copyright infringement, and digital privacy rights.
 
