@@ -5,20 +5,58 @@
     sans-serif;
 }
 
-html {
+/* 1. FORCE HIDE BLINKING TYPING CARET CURSOR EVERYWHERE BY DEFAULT */
+* {
+  caret-color: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+/* 2. ENABLE VISIBLE TYPING CARET ONLY INSIDE INPUTS & TEXTAREAS */
+input,
+textarea,
+[contenteditable="true"] {
+  caret-color: auto !important;
+}
+
+/* 3. BASE HTML & BODY CURSOR */
+html,
+body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: default;
-}
-
-body {
-  font-family: var(--font-sans);
   background: #ffffff;
+  cursor: default !important;
+}
+
+/* 4. ENFORCE DEFAULT ARROW CURSOR ON LAYOUT ELEMENTS */
+body,
+div,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section,
+article,
+header,
+footer,
+nav,
+aside,
+main,
+ul,
+ol,
+li,
+table,
+td,
+th {
   cursor: default;
 }
 
-/* Restrict text typing cursor STRICTLY to input fields & textareas */
+/* 5. FORM INPUTS & TEXTAREAS GET TEXT CURSOR */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -32,7 +70,7 @@ textarea,
   cursor: text !important;
 }
 
-/* Ensure buttons, links, and interactive controls always show pointer cursor */
+/* 6. BUTTONS & LINKS GET POINTER CURSOR */
 a,
 button,
 [role="button"],
@@ -42,11 +80,12 @@ input[type="button"],
 input[type="checkbox"],
 input[type="radio"],
 .cursor-pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
-/* Disable unwanted text selection on UI controls */
+/* 7. PREVENT ACCIDENTAL TEXT SELECTION & CURSORS ON BUTTONS */
 button,
+a,
 .no-select {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -54,11 +93,7 @@ button,
   user-select: none;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #d1d5db transparent;
-}
-
+/* SCROLLBAR CUSTOMIZATION */
 *::-webkit-scrollbar {
   width: 6px;
   height: 6px;
