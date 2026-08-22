@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   description:
     "FinTell helps first-time bank account holders learn banking, simulate financial decisions, manage debt, and spot scams safely.",
   icons: {
-    icon: "/fintell-logo.png",
-    shortcut: "/fintell-logo.png",
-    apple: "/fintell-logo.png",
+    icon: "/images/fintell-logo-mark-3d.png",
+    shortcut: "/images/fintell-logo-mark-3d.png",
+    apple: "/images/fintell-logo-mark-3d.png",
   },
 };
 

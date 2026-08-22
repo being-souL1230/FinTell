@@ -58,7 +58,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-sm rounded-lg border border-slate-200/80 bg-white p-7 shadow-lg shadow-slate-200/30">
         <div className="flex items-center justify-between gap-2.5">
           <div className="flex items-center gap-2.5">
-            <img src="/fintell-logo.png" alt="FinTell Logo" className="h-8 w-8 object-contain drop-shadow-xs" />
+            <img src="/images/fintell-logo-mark-3d.png" alt="FinTell 3D Logo" className="h-9 w-9 object-contain drop-shadow-xs" />
             <span className="text-lg font-black tracking-tight text-slate-900">FinTell</span>
           </div>
           <BrowserTranslateButton compact />
