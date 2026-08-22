@@ -151,7 +151,7 @@ function LandingContent({ lang }: { lang: LangCode }) {
 
             {/* Subheadline */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto font-medium">
-              Train against realistic panic scam calls, verify suspicious links and UPI IDs with AI, master 50/30/20 budgeting, and reconcile business GST feeds—all in one encrypted app.
+              Train against realistic panic scam calls, verify suspicious links and UPI IDs with AI, master 50/30/20 budgeting, and reconcile business GST feeds. Everything in one encrypted app.
             </p>
 
             {/* CTAs */}
