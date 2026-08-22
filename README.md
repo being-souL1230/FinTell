@@ -5,12 +5,13 @@ FinTell is a comprehensive, AI-powered financial literacy, scam protection, pers
 ## Table of Contents
 
 1. Overview
-2. Core Features and Module Breakdown
-   - Scam Protection and AI Security Suite
-   - Personal Money Management
-   - Business and MSME Mode
-   - Financial Literacy and Gamification
-   - AI Financial Assistant
+2. Complete 18-Module Breakdown
+   - Category A: Scam Defense and AI Security Suite (Modules 1-4)
+   - Category B: Personal Money Management and Debt Optimization (Modules 5-8)
+   - Category C: Business and MSME Shopkeeper Suite (Modules 9-11)
+   - Category D: Financial Literacy, AI, and Gamification (Modules 12-16)
+   - Category E: Admin Management Suite (Module 17)
+   - Category F: Multi-Language and Onboarding System (Module 18)
 3. Architecture and Technology Stack
 4. Database Schema and Infrastructure
 5. Installation and Local Setup
@@ -26,56 +27,128 @@ Financial illiteracy and sophisticated digital fraud cause severe financial loss
 
 FinTell addresses this challenge by providing an all-in-one financial operating system that combines real-time AI scam detection, interactive voice call simulators, debt optimization engines, bank statement analytics, and automated GST reconciliation for small businesses.
 
-## 2. Core Features and Module Breakdown
+## 2. Complete 18-Module Breakdown
 
-### Scam Protection and AI Security Suite
+FinTell is structured into 18 dedicated feature modules split across 6 operational categories:
+
+### Category A: Scam Defense and AI Security Suite
 
 Path: `/dashboard/scams`
 
-FinTell provides a complete cyber defense training and verification environment to build resilience against digital financial crimes.
+1. **Interactive Scam Scenario Drills** (`/dashboard/scams` -> `Scenario Drills`)
+   - Interactive checkpoint drills covering SMS phishing, QR code payment traps, fake lottery calls, and investment fraud.
+   - Immediate feedback breakdowns explaining the psychology behind each scam.
+   - XP reward allocation upon successful resolution.
 
-- Link and UPI AI Fraud Checker (`/dashboard/scams` -> `Link & UPI AI Checker`): Allows users to input suspicious text messages, URL links, Telegram job offers, or UPI handles. The AI engine evaluates suspicious patterns, calculates a Fraud Risk Score (0 to 100), identifies specific red flags, and gives instant guidance.
-- Emergency Voice Call Scam Simulator (`/dashboard/scams` -> `Emergency Call Simulator`): An interactive, real-time simulated call environment equipped with Web Audio ringing effects, ticking call timers, live typewriter transcripts, audio waveform animations, and real-time red flag detectors. It trains users against six realistic Indian scam scenarios:
-  1. Hospital Emergency Panic Call (Urgent UPI deposit trap)
-  2. Fake CBI and Police Digital Arrest Call (WhatsApp video warrant extortion)
-  3. Bank Account Freeze and Urgent KYC Expiry (OTP theft trap)
-  4. Insurance Policy Cash Refund and Bonus Fraud (Upfront GST fee trap)
-  5. Electricity Board Instant Power Cut Threat (Malicious APK installation threat)
-  6. International Customs Courier Contraband Scam (FedEx narcotics extortion)
-- Interactive Scam Scenario Drills: Practical checkpoint exercises covering SMS phishing, fake lottery calls, investment fraud, and QR code scams with detailed explanation breakdowns.
-- Verified Safety Certificate (`/dashboard/scams` -> `Safety Certificate`): Once users complete security drills, FinTell generates an official "Certified Scam-Protected Citizen" certificate showing user name, safety score, issue timestamp, seal, QR verification code, and print/download functionality.
+2. **AI Link and UPI Fraud Risk Checker** (`/dashboard/scams` -> `Link & UPI AI Checker`)
+   - Instant text analyzer for suspicious URLs, Telegram job invitations, and UPI handles.
+   - AI-generated Fraud Risk Score from 0 to 100 with clear threat level classification.
+   - Real-time red flag extraction (unverified sender, urgency triggers, domain anomalies).
+   - Step-by-step protective action advice.
 
-### Personal Money Management
+3. **Emergency Voice Call Scam Simulator** (`/dashboard/scams` -> `Emergency Call Simulator`)
+   - Real-time simulated phone call interface with Web Audio ringing effects.
+   - Real-time ticking call duration timer (`MM:SS`).
+   - Typewriter transcript playback simulating live caller audio.
+   - CSS frequency audio waveform animation.
+   - Progressive red flag detection card revealing scam indicators as the transcript streams.
+   - Decline button handling to teach proper instinct for unknown calls.
+   - Six Indian scam scenarios: Hospital Emergency, CBI Digital Arrest, Bank Account Freeze/KYC, Insurance Refund Fraud, Electricity Power Cut Threat, and FedEx Customs Contraband.
+
+4. **Verified Safety Certificate** (`/dashboard/scams` -> `Safety Certificate`)
+   - Official "Certified Scam-Protected Citizen" certificate generator.
+   - Displays user name, safety score, issue timestamp, official seal, and unique QR verification badge.
+   - Built-in print and download PDF functionality.
+
+### Category B: Personal Money Management and Debt Optimization
 
 Path: `/dashboard/money`
 
-- Smart 50/30/20 Budget Planner: Customizes budget allocation based on monthly net income, separating fixed essential needs (50%), variable wants (30%), recommended savings (20%), and emergency buffer thresholds.
-- Bank Statement and Subscription Analyzer: Accepts bank CSV passbook exports, auto-categorizes outlays (Food, Utilities, Shopping, Transport), and identifies hidden or unexpected recurring subscriptions.
-- Debt Payoff Calculator (Snowball vs. Avalanche): Allows users to input multiple active loans or credit card balances and compare two mathematical payoff strategies side-by-side:
-  - Debt Snowball: Prioritizes paying the lowest balance first for psychological momentum.
-  - Debt Avalanche: Prioritizes paying the highest interest rate loan first to minimize total interest paid over time.
-- Custom Goal Tracker: Visual progress tracking for long-term objectives (Emergency Fund, Vehicle, Education, Home) with monthly deposit targets and estimated completion timelines.
+5. **Smart 50/30/20 Budget Planner** (`/dashboard/money` -> `My Budget Plan`)
+   - Customized budget distribution tailored to user net income.
+   - Divides income into Fixed Needs (50%), Variable Wants (30%), Recommended Savings (20%), and Emergency Buffer.
+   - Visual progress indicators and surplus/deficit alerts.
 
-### Business and MSME Mode
+6. **Bank Statement and Subscription Analyzer** (`/dashboard/money` -> `Statement Analyzer`)
+   - Drag-and-drop parser for bank passbook CSV exports.
+   - Auto-categorization of expenses (Food, Bills, Shopping, Transport, Healthcare).
+   - Detection and flagging of hidden or forgotten recurring auto-debit subscriptions.
 
-Path: `/dashboard` (Unlocked when business mode is selected in onboarding)
+7. **Debt Payoff Calculator (Snowball vs. Avalanche)** (`/dashboard/money` -> `Debt Payoff Calculator`)
+   - Multi-loan management input for credit cards, personal loans, and EMIs.
+   - Side-by-side strategy comparison:
+     - Debt Snowball: Pay smallest balance first for quick psychological wins.
+     - Debt Avalanche: Pay highest interest rate first for maximum monetary savings.
+   - Detailed month-by-month payoff timeline, interest paid, and completion dates.
 
-- GST and Bank Feed Reconciliation (`/dashboard/reconcile`): Compares bank transaction feeds against vendor purchase invoices to detect tax rate discrepancies, duplicate billing, and unrecorded transactions.
-- Document and Invoice Verification (`/dashboard/verify`): Analyzes uploaded receipts, tax invoices, and GSTIN numbers to ensure authenticity.
-- Business Financial and Tax Reports (`/dashboard/reports`): Generates consolidated profit and loss summaries, estimated GST outlays, and audit trails for shopkeepers and MSMEs.
+8. **Custom Goal Tracker** (`/dashboard/money` -> `Custom Goal Tracker`)
+   - Visual goal creation for Emergency Funds, Vehicle, Education, Home, or Business.
+   - Target amount setting with progress bar tracking and monthly contribution targets.
+   - Estimated completion date calculation based on saving pace.
 
-### Financial Literacy and Gamification
+### Category C: Business and MSME Shopkeeper Suite
 
-- Bite-Sized Micro Lessons (`/dashboard/learn`): Structured learning modules covering Banking Basics, UPI Safety, Fixed Deposits, Mutual Funds, CIBIL Scores, and Tax Filing. Each lesson includes quiz checkpoints and XP rewards.
-- Financial Jargon Translator (`/dashboard/glossary`): A searchable glossary translating complex financial terms (SIP, CAGR, Input Tax Credit, Repo Rate, Inflation) into clear language.
-- Financial Simulators (`/dashboard/simulator`): Interactive calculators for Fixed Deposit (FD) returns, Compound Interest growth, EMI schedules, and Savings comparison.
-- Progress and Achievement Tracking (`/dashboard/progress`): Tracks user XP, rank badges, streak counts, and completed security certifications.
+Path: Unlocked when Business Mode is selected in onboarding
 
-### AI Financial Assistant
+9. **GST and Bank Feed Reconciliation** (`/dashboard/reconcile`)
+   - Comparison engine matching bank transaction feeds against vendor purchase invoices.
+   - Auto-detection of GST rate discrepancies, duplicate payments, and unrecorded receipts.
+   - Discrepancy flagging for small business compliance.
 
-Path: `/dashboard/assistant`
+10. **Document and Invoice Verification** (`/dashboard/verify`)
+    - Document verification for uploaded vendor receipts, tax invoices, and GSTIN numbers.
+    - Authenticity checking to prevent double-billing and fraudulent invoices.
 
-A 24/7 conversational financial assistant powered by Groq LLM and localized knowledge base search. It answers questions on budgeting, banking rules, investments, and fraud defense while maintaining strict safety guardrails (never asking for or storing passwords, OTPs, or PINs).
+11. **Business Tax and Financial Reports** (`/dashboard/reports`)
+    - Comprehensive profit and loss (P&L) summaries.
+    - GST outlay calculations and estimated tax liabilities.
+    - Exportable audit trail logs for shopkeepers and small business owners.
+
+### Category D: Financial Literacy, AI, and Gamification
+
+12. **Bite-Sized Micro Lessons** (`/dashboard/learn`)
+    - Structured educational curriculum on Banking Basics, UPI Safety, Fixed Deposits, Mutual Funds, CIBIL Scores, and Tax Filing.
+    - Interactive quiz checkpoints at the end of each lesson.
+    - Category filtering and lesson progress tracking.
+
+13. **Financial Term Translator** (`/dashboard/glossary`)
+    - Searchable dictionary translating complex financial jargon (SIP, CAGR, Input Tax Credit, Inflation, Repo Rate, CIBIL).
+    - Clear, everyday language explanations with practical usage examples.
+
+14. **Financial Simulators and Calculators** (`/dashboard/simulator`)
+    - Fixed Deposit (FD) return growth simulator.
+    - Compound interest multiplier calculator.
+    - Loan EMI calculator and savings comparison model.
+
+15. **My Progress and Achievement Tracking** (`/dashboard/progress`)
+    - User profile overview tracking earned XP points, rank levels, and drill streaks.
+    - Achievement badge showcase with unlock criteria.
+    - Completed safety certifications log.
+
+16. **AI Financial Guardian Assistant** (`/dashboard/assistant`)
+    - 24/7 conversational financial assistant powered by Groq LLM.
+    - Localized Knowledge Base fallback for instant answers.
+    - Voice-enabled input support and markdown response formatting.
+    - Strict security guardrails (refuses credential requests).
+
+### Category E: Admin Management Suite
+
+Path: `/dashboard/admin`
+
+17. **Admin Management Suite** (`/dashboard/admin`)
+    - Overview Dashboard (`/dashboard/admin`): Metrics on total users, completed drills, active lessons, and system health.
+    - Lesson Manager (`/dashboard/admin/lessons`): CRUD interface to create, edit, reorder, and delete micro-lessons and quiz questions.
+    - Scam Drill Manager (`/dashboard/admin/scams`): Tools to add, edit, or disable scam scenarios and risk parameters.
+    - Glossary Manager (`/dashboard/admin/glossary`): Interface to manage financial terms and plain-language definitions.
+    - User Analytics and Role Management (`/dashboard/admin/users`): User directory, role promotion (User <-> Admin), and XP adjustments.
+
+### Category F: Multi-Language and Onboarding System
+
+18. **Multi-Language and Onboarding System** (`/onboarding`)
+    - Multi-language support across 11 Indian languages (English, Hindi, Marathi, Tamil, Bengali, Telugu, Gujarati, Punjabi, Kannada, Malayalam, Odia).
+    - Onboarding flow with mode selection (Everyday Citizen vs. MSME Business Owner).
+    - One-click Guest Mode access.
+    - Self-serve permanent account deletion with cascading database cleanup.
 
 ## 3. Architecture and Technology Stack
 
