@@ -1,9 +1,63 @@
-PROPRIETARY LICENSE (ALL RIGHTS RESERVED)
+PROPRIETARY SOFTWARE LICENSE AGREEMENT
+ALL RIGHTS RESERVED (STRICT PROPRIETARY & NON-DISTRIBUTION LICENSE)
+
+Copyright (c) 2026 FinTell and its Original Authors. All Rights Reserved.
+
+IMPORTANT LEGAL NOTICE: PLEASE READ THIS PROPRIETARY LICENSE AGREEMENT ("AGREEMENT") CAREFULLY BEFORE ACCESSING, VIEWING, DOWNLOADING, COMPILING, OR USING ANY PORTION OF THIS SOFTWARE, SOURCE CODE, DATABASE SCHEMAS, AI PROMPTS, UI DESIGNS, OR DOCUMENTATION (COLLECTIVELY, THE "SOFTWARE").
+
+BY ACCESSING OR VIEWING THIS SOURCE CODE OR REPOSITORY, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ALL OF ITS TERMS AND PROHIBITIONS.
+
+---
+
+1. INTELLECTUAL PROPERTY & OWNERSHIP RIGHTS
+
+The Software, including but not limited to all source code, TypeScript/JavaScript files, Next.js components, database migrations and schemas, UI/UX designs, CSS styles, AI prompt engineering logic, knowledge base data, scam simulator scenarios, graphics, logos, algorithms, and documentation, is the exclusive proprietary property of FinTell and its authors.
+
+The Software is protected by applicable international copyright laws, trade secret laws, trademark laws, and intellectual property treaties. No title, ownership, or intellectual property rights in or to the Software are transferred to any individual, company, or entity accessing this codebase.
+
+---
+
+2. ABSOLUTE PROHIBITION OF USE & REDISTRIBUTION
+
+Unless you have obtained prior, explicit, written authorization signed by FinTell's authorized representative, you are STRICTLY PROHIBITED from doing any of the following:
+
+a. Copying and Reproduction: You shall not copy, duplicate, replicate, reproduce, or clone the Software, in whole or in part, in any media, repository, format, or storage medium.
+b. Modification and Derivative Works: You shall not modify, adapt, translate, alter, create derivative works from, or build upon any part of this Software or its underlying architecture.
+c. Distribution and Public Display: You shall not distribute, publish, host, sub-license, rent, lease, sell, resell, assign, transfer, convey, or otherwise publicly display or make available this Software or any of its component files to any third party.
+d. Commercial Use: You shall not use this Software, its algorithms, UI components, AI prompts, or business logic for any commercial purpose, commercial product, Software-as-a-Service (SaaS), API service, enterprise deployment, or monetization effort.
+e. Reverse Engineering and Extraction: You shall not reverse engineer, decompile, disassemble, extract, decrypt, or attempt to derive the source code, database structures, or AI guardrails contained within the Software.
+f. Brand and Trademark Misappropriation: You shall not use the name "FinTell", FinTell logos, trademarks, service marks, or branding in any manner that creates confusion or implies endorsement without prior written consent.
+g. Hackathon and Competition Mirroring: You shall not submit, present, publish, or enter this Software, its source code, or any derivative version into any hackathon, competition, academic project, or public showcase under any name other than the original authoring team.
+
+---
+
+3. REQUISITE PERMISSIONS & NO IMPLIED LICENSES
+
+No license, implied right, estoppel, or permission is granted under this Agreement except as expressly stated herein. Viewing this source code on GitHub or any public code repository does NOT grant any right, license, or permission to run, execute, deploy, copy, or distribute the Software for personal, educational, commercial, or non-commercial purposes.
+
+---
+
+4. TERMINATION & INJUNCTIVE RELIEF
+
+Any unauthorized attempt to copy, modify, distribute, host, sell, or reverse engineer any portion of the Software automatically voids any prior communications and constitutes a material infringement of FinTell's intellectual property rights.
+
+In the event of a breach of this Agreement, FinTell reserves the right to seek all available legal, equitable, and monetary remedies under civil and criminal law, including but not limited to immediate injunctive relief, domain seizure, repository takedown (DMCA), court-ordered restitution, and statutory damages for willful infringement.
+
+---
+
+5. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, OR SYSTEM COMPATIBILITY. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+6. GOVERNING LAW & JURISDICTION
+
+This Agreement and any disputes arising out of or in connection with it shall be governed by, construed, and enforced in accordance with applicable laws governing intellectual property, copyright infringement, and digital privacy rights.
+
+---
+
+FOR AUTHORIZATION & INQUIRIES:
+To request written permission for licensing, academic presentation, or partnership inquiries, please contact the official repository owner.
 
 Copyright (c) 2026 FinTell. All Rights Reserved.
-
-NOTICE: All information contained herein is, and remains the property of FinTell and its authors. The intellectual and technical concepts contained herein are proprietary to FinTell and may be covered by copyright or trade secret laws.
-
-UNAUTHORIZED COPYING, REPRODUCTION, MODIFICATION, DISTRIBUTION, OR USE OF THIS SOFTWARE, SOURCE CODE, OR ANY PORTION THEREOF IS STRICTLY PROHIBITED WITHOUT EXPRESS WRITTEN PERMISSION FROM THE AUTHORS.
-
-This software is provided "as is", without warranty of any kind, express or implied.
