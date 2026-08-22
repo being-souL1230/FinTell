@@ -104,7 +104,7 @@ export function Sidebar({ isAdmin, name, hasBusiness = false }: { isAdmin: boole
       {/* Logo */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-emerald-100/80 bg-gradient-to-b from-emerald-50/60 via-teal-50/30 to-transparent">
         <img
-          src="/fintell-logo.png"
+          src="/images/fintell-logo-mark-3d.png"
           alt="FinTell Logo"
           className="h-9 w-9 object-contain drop-shadow-sm"
         />
@@ -220,7 +220,7 @@ export function Sidebar({ isAdmin, name, hasBusiness = false }: { isAdmin: boole
       <div className="sticky top-0 z-30 flex items-center justify-between border-b border-slate-200/80 bg-white/95 backdrop-blur-sm px-4 py-3 lg:hidden">
         <div className="flex items-center gap-2.5">
           <img
-            src="/fintell-logo.png"
+            src="/images/fintell-logo-mark-3d.png"
             alt="FinTell Logo"
             className="h-8 w-8 object-contain drop-shadow-sm"
           />

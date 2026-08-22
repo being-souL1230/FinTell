@@ -100,9 +100,9 @@ function LandingContent({ lang }: { lang: LangCode }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2.5 group">
             <img
-              src="/images/fintell-logo.png"
-              alt="FinTell Logo"
-              className="h-9 w-9 object-contain drop-shadow-xs transition group-hover:scale-105"
+              src="/images/fintell-logo-mark-3d.png"
+              alt="FinTell 3D Logo"
+              className="h-10 w-10 object-contain drop-shadow-md transition group-hover:scale-105"
             />
             <div>
               <span className="text-xl font-black tracking-tight text-slate-950 flex items-center gap-1.5">
@@ -186,6 +186,50 @@ function LandingContent({ lang }: { lang: LangCode }) {
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* 3.5 PRASUNET HACKATHON SHOWCASE CARD CONTAINER */}
+      <section className="mx-auto max-w-5xl px-6 pb-14">
+        <div className="rounded-none border-2 border-slate-900 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+          
+          {/* Subtle lime glow background */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-lime-500/10 blur-[80px] pointer-events-none" />
+
+          {/* Left Content */}
+          <div className="space-y-3 text-center md:text-left max-w-xl z-10">
+            <div className="inline-flex items-center gap-2 bg-lime-400 text-slate-950 px-3 py-0.5 text-[10px] font-black uppercase tracking-wider">
+              <Award className="h-3.5 w-3.5" />
+              <span>Official Prasunet Hackathon Project</span>
+            </div>
+
+            <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
+              Designed &amp; Engineered for <span className="text-lime-400">Prasunet Hackathon</span>
+            </h3>
+
+            <p className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+              FinTell was built to tackle India&apos;s growing cyber fraud epidemic, financial illiteracy, and business accounting friction. Engineered as a unified AI Financial Guardian to protect citizens and empower MSME shopkeepers.
+            </p>
+
+            <div className="pt-1 flex flex-wrap items-center justify-center md:justify-start gap-4 text-[11px] font-bold text-slate-400 font-mono">
+              <span className="flex items-center gap-1 text-lime-400">
+                <CheckCircle2 className="h-3.5 w-3.5" /> Hackathon Submission
+              </span>
+              <span className="flex items-center gap-1 text-lime-400">
+                <CheckCircle2 className="h-3.5 w-3.5" /> AI Fraud &amp; Security
+              </span>
+            </div>
+          </div>
+
+          {/* Right Logo Display */}
+          <div className="shrink-0 flex items-center justify-center z-10 group">
+            <img
+              src="/images/prasunet-hackathon-logo-transparent-3d.png"
+              alt="Prasunet Hackathon Official Logo"
+              className="h-20 sm:h-24 md:h-28 object-contain drop-shadow-[0_8px_18px_rgba(132,204,22,0.3)] transition transform group-hover:scale-105"
+            />
+          </div>
+
         </div>
       </section>
 
@@ -511,7 +555,7 @@ function LandingContent({ lang }: { lang: LangCode }) {
       <footer className="border-t border-slate-200 py-10 bg-white text-slate-500 text-xs">
         <div className="mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <img src="/images/fintell-logo.png" alt="FinTell Logo" className="h-6 w-6 object-contain" />
+            <img src="/images/fintell-logo-mark-3d.png" alt="FinTell 3D Logo" className="h-7 w-7 object-contain" />
             <span className="font-black text-slate-900">FinTell AI Financial Guardian</span>
           </div>
 

@@ -64,7 +64,7 @@ export function SafetyCertificate({
         {/* Header Branding */}
         <div className="text-center space-y-2 border-b-2 border-slate-100 pb-6">
           <div className="flex items-center justify-center gap-2">
-            <img src="/fintell-logo.png" alt="FinTell" className="h-10 w-10 object-contain" />
+            <img src="/images/fintell-logo-mark-3d.png" alt="FinTell 3D Logo" className="h-10 w-10 object-contain" />
             <span className="text-2xl font-black tracking-tight text-slate-900">FinTell AI</span>
           </div>
           <p className="text-[10px] font-black uppercase tracking-widest text-emerald-700">
