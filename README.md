@@ -1,128 +1,203 @@
-# 🛡️ FinTell — AI Financial Guardian & Smart Money Companion
+# FinTell: AI Financial Guardian and Smart Money Companion
 
-> **FinTell** is a next-generation, AI-powered financial literacy, scam protection, personal budgeting, and MSME business intelligence platform. It helps everyday citizens, young professionals, and shopkeepers make safe financial decisions, protect themselves against digital fraud, and build long-term wealth.
+FinTell is a comprehensive, AI-powered financial literacy, scam protection, personal budgeting, and MSME business intelligence platform. It is engineered to help citizens, young professionals, and shopkeepers make safe financial decisions, defend against digital financial fraud, optimize debt repayment, and build long-term financial security.
 
----
+## Table of Contents
 
-## 🌟 What is FinTell?
+1. Overview
+2. Core Features and Module Breakdown
+   - Scam Protection and AI Security Suite
+   - Personal Money Management
+   - Business and MSME Mode
+   - Financial Literacy and Gamification
+   - AI Financial Assistant
+3. Architecture and Technology Stack
+4. Database Schema and Infrastructure
+5. Installation and Local Setup
+6. Environment Configuration
+7. Database Commands and Migrations
+8. Project Folder Structure
+9. Security and Privacy Principles
+10. License
 
-FinTell acts as a **24/7 Personal Financial Guardian**. Many people lose money due to financial illiteracy, hidden bank charges, unexpected debt, or sophisticated online UPI/SMS scams. FinTell solves this by bringing **AI-driven scam detection, smart debt calculators, bank statement analytics, and business reconciliation** into one intuitive application.
+## 1. Overview
 
----
+Financial illiteracy and sophisticated digital fraud cause severe financial loss across urban and rural populations. From deceptive UPI cashback links to high-pressure fake police calls and unmanaged high-interest debt, individuals often lack real-time tools to evaluate risk.
 
-## 🎯 Key Objectives & How People Use FinTell
+FinTell addresses this challenge by providing an all-in-one financial operating system that combines real-time AI scam detection, interactive voice call simulators, debt optimization engines, bank statement analytics, and automated GST reconciliation for small businesses.
 
-1. **Protect Against Digital Scams**: Paste suspicious links or UPI IDs to detect fraud before clicking or transferring money.
-2. **Master Personal Finance**: Auto-categorize expenses, track subscriptions, plan savings goals, and accelerate loan payoffs.
-3. **Run a Safe Business**: MSMEs and shopkeepers can reconcile bank feeds with purchase invoices and detect GST mismatches.
-4. **Learn Financial Concepts**: Complete micro-lessons with quizzes, earn verified safety certificates, and translate complex financial jargon into simple terms.
+## 2. Core Features and Module Breakdown
 
----
+### Scam Protection and AI Security Suite
 
-## 🧩 Complete Feature & Module Breakdown
+Path: `/dashboard/scams`
 
-### 1. 📊 Personal Finance & Smart Analytics (`/dashboard/money`)
-- **My Budget Plan**: Smart 50/30/20 budgeting rule customized to your income, calculating fixed needs, variable wants, recommended savings, and emergency buffer.
-- **Bank Statement & Subscription Analyzer**: Drag & drop bank CSV passbook statement -> Auto-categorizes outlays (Food, Bills, Shopping, Transport) and flags hidden recurring OTT / Gym auto-debits.
-- **Debt Payoff Calculator**: Input multiple loans/EMIs and compare two proven payoff strategies side-by-side:
-  - **Debt Snowball**: Pay smallest balance first to build quick psychological momentum.
-  - **Debt Avalanche**: Pay highest-interest loan first to maximize interest savings.
-- **Custom Savings Goal Tracker**: Set specific targets (*New Electric Scooter*, *Emergency Cushion*, *Education*) with visual progress bars, monthly target deposits, and completion ETAs.
+FinTell provides a complete cyber defense training and verification environment to build resilience against digital financial crimes.
 
----
+- Link and UPI AI Fraud Checker (`/dashboard/scams` -> `Link & UPI AI Checker`): Allows users to input suspicious text messages, URL links, Telegram job offers, or UPI handles. The AI engine evaluates suspicious patterns, calculates a Fraud Risk Score (0 to 100), identifies specific red flags, and gives instant guidance.
+- Emergency Voice Call Scam Simulator (`/dashboard/scams` -> `Emergency Call Simulator`): An interactive, real-time simulated call environment equipped with Web Audio ringing effects, ticking call timers, live typewriter transcripts, audio waveform animations, and real-time red flag detectors. It trains users against six realistic Indian scam scenarios:
+  1. Hospital Emergency Panic Call (Urgent UPI deposit trap)
+  2. Fake CBI and Police Digital Arrest Call (WhatsApp video warrant extortion)
+  3. Bank Account Freeze and Urgent KYC Expiry (OTP theft trap)
+  4. Insurance Policy Cash Refund and Bonus Fraud (Upfront GST fee trap)
+  5. Electricity Board Instant Power Cut Threat (Malicious APK installation threat)
+  6. International Customs Courier Contraband Scam (FedEx narcotics extortion)
+- Interactive Scam Scenario Drills: Practical checkpoint exercises covering SMS phishing, fake lottery calls, investment fraud, and QR code scams with detailed explanation breakdowns.
+- Verified Safety Certificate (`/dashboard/scams` -> `Safety Certificate`): Once users complete security drills, FinTell generates an official "Certified Scam-Protected Citizen" certificate showing user name, safety score, issue timestamp, seal, QR verification code, and print/download functionality.
 
-### 2. 🛡️ Scam Protection & AI Security Suite (`/dashboard/scams`)
-- **Interactive Scam Drills**: Practice identifying fake KYC SMS, OTP traps, phishing emails, and UPI payment scams in a risk-free simulator.
-- **Suspicious Link & UPI AI Checker**: Paste any suspicious SMS text, Telegram job link, or UPI ID (`cashback-win@upi`) -> AI calculates a **Fraud Risk Score (0-100)**, flags Red Flags, and gives immediate action advice.
-- **Emergency Voice Call Scam Simulator**: Simulated incoming panic call screen (*"Hospital Emergency"*, *"CBI Digital Arrest"*), audio ringing sound effects, live transcript, and decision choices with instant feedback.
-- **Downloadable Safety Certificate**: Complete drills to earn an official **"Certified Scam-Protected Citizen"** certificate featuring user name, safety score, issue date, seal, and QR verification badge with a direct **Print / Download PDF** trigger.
+### Personal Money Management
 
----
+Path: `/dashboard/money`
 
-### 3. 💼 Business & Shopkeeper Suite (`/dashboard`)
-*(Unlocked when selecting "Yes, I run a Business" during Onboarding)*
-- **GST & Bank Feed Reconciliation (`/dashboard/reconcile`)**: Compare bank feed records with vendor invoices to spot GST rate discrepancies, duplicate payments, and missing invoices.
-- **Document & Invoice Intelligence (`/dashboard/verify`)**: Verify vendor receipts, tax invoices, and tax filing documents.
-- **Business Financial & Tax Reports (`/dashboard/reports`)**: Tax outlays, profit/loss summaries, and audit trail logs.
+- Smart 50/30/20 Budget Planner: Customizes budget allocation based on monthly net income, separating fixed essential needs (50%), variable wants (30%), recommended savings (20%), and emergency buffer thresholds.
+- Bank Statement and Subscription Analyzer: Accepts bank CSV passbook exports, auto-categorizes outlays (Food, Utilities, Shopping, Transport), and identifies hidden or unexpected recurring subscriptions.
+- Debt Payoff Calculator (Snowball vs. Avalanche): Allows users to input multiple active loans or credit card balances and compare two mathematical payoff strategies side-by-side:
+  - Debt Snowball: Prioritizes paying the lowest balance first for psychological momentum.
+  - Debt Avalanche: Prioritizes paying the highest interest rate loan first to minimize total interest paid over time.
+- Custom Goal Tracker: Visual progress tracking for long-term objectives (Emergency Fund, Vehicle, Education, Home) with monthly deposit targets and estimated completion timelines.
 
----
+### Business and MSME Mode
 
-### 4. 📚 Financial Literacy & Interactive Tools
-- **Bite-Sized Micro Lessons (`/dashboard/learn`)**: Short, practical modules on Banking, Investments, Budgeting, and Fraud Defense with quiz checkpoints and XP awards.
-- **Financial Term Translator (`/dashboard/glossary`)**: Translates complex jargon (*SIP, CIBIL Score, CAGR, Inflation, GSTIN, Input Tax Credit*) into simple everyday language.
-- **Interactive Calculators (`/dashboard/simulator`)**: Compound interest growth calculators, SIP vs Fixed Deposit comparisons, and emergency buffer planners.
-- **My Progress & Badges (`/dashboard/progress`)**: Track total XP, rank levels, drill streaks, and safety badges earned.
-- **AI Financial Guardian Assistant (`/dashboard/assistant`)**: Voice-enabled 24/7 AI chatbot to answer money questions safely without ever asking for passwords or PINs.
+Path: `/dashboard` (Unlocked when business mode is selected in onboarding)
 
----
+- GST and Bank Feed Reconciliation (`/dashboard/reconcile`): Compares bank transaction feeds against vendor purchase invoices to detect tax rate discrepancies, duplicate billing, and unrecorded transactions.
+- Document and Invoice Verification (`/dashboard/verify`): Analyzes uploaded receipts, tax invoices, and GSTIN numbers to ensure authenticity.
+- Business Financial and Tax Reports (`/dashboard/reports`): Generates consolidated profit and loss summaries, estimated GST outlays, and audit trails for shopkeepers and MSMEs.
 
-### 5. 🔒 User Privacy & Account Security
-- **Multi-Language Support**: Easily switch between English, Hindi, and regional languages.
-- **Account Control & Deletion**: Self-serve permanent account deletion with cascading database cleanup for complete data privacy.
+### Financial Literacy and Gamification
 
----
+- Bite-Sized Micro Lessons (`/dashboard/learn`): Structured learning modules covering Banking Basics, UPI Safety, Fixed Deposits, Mutual Funds, CIBIL Scores, and Tax Filing. Each lesson includes quiz checkpoints and XP rewards.
+- Financial Jargon Translator (`/dashboard/glossary`): A searchable glossary translating complex financial terms (SIP, CAGR, Input Tax Credit, Repo Rate, Inflation) into clear language.
+- Financial Simulators (`/dashboard/simulator`): Interactive calculators for Fixed Deposit (FD) returns, Compound Interest growth, EMI schedules, and Savings comparison.
+- Progress and Achievement Tracking (`/dashboard/progress`): Tracks user XP, rank badges, streak counts, and completed security certifications.
 
-## 🛠️ Technology Stack
+### AI Financial Assistant
 
-- **Frontend**: Next.js 15+ (App Router), React, TypeScript, Tailwind CSS
-- **Icons & UI Components**: Lucide React Icons, Custom Accessible UI Library
-- **Backend & Database**: Next.js Server Actions & API Routes, PostgreSQL, Drizzle ORM
-- **AI & Processing**: Google Generative AI / Custom AI Heuristic Fraud Engine
+Path: `/dashboard/assistant`
 
----
+A 24/7 conversational financial assistant powered by Groq LLM and localized knowledge base search. It answers questions on budgeting, banking rules, investments, and fraud defense while maintaining strict safety guardrails (never asking for or storing passwords, OTPs, or PINs).
 
-## 🚀 Quick Start & Installation
+## 3. Architecture and Technology Stack
+
+- Framework: Next.js 15+ (App Router, React 19)
+- Language: TypeScript
+- Styling: Tailwind CSS v4, custom utility styling
+- Database: PostgreSQL (Neon Serverless PostgreSQL support)
+- Object Relational Mapper (ORM): Drizzle ORM
+- Database Driver: `pg` (node-postgres)
+- Authentication and State: JSON Web Tokens (JWT via `jose`), HTTP-only cookies, React Context
+- Icons: Lucide React Icons
+- AI Integration: Groq API (`openai/gpt-oss-120b`, `groq/compound`) and local Knowledge Base search fallback
+
+## 4. Database Schema and Infrastructure
+
+The database schema is defined in `src/db/schema.ts` and managed via Drizzle ORM.
+
+Key Database Tables:
+- `users`: User profiles, credentials, role (user/admin), language preferences, onboarding state, business flag, and XP points.
+- `lessons` & `lesson_progress`: Learning curriculum data and user completion records.
+- `quiz_questions`: Checkpoint questions linked to lessons.
+- `scam_scenarios` & `scam_attempts`: Security drills and user performance tracking.
+- `badges` & `user_badges`: Gamification rewards and user achievement links.
+- `glossary_terms`: Financial terms dictionary data.
+- `money_profiles` & `monthly_money_progress`: User financial setups, income, expenses, and savings targets.
+- `ai_chat_logs`: Audit trail for AI assistant queries.
+
+## 5. Installation and Local Setup
 
 ### Prerequisites
-- Node.js (v18.x or higher)
-- PostgreSQL database
 
-### Steps
+- Node.js version 18.x or higher
+- PostgreSQL database instance (local PostgreSQL server or Neon PostgreSQL connection URL)
 
-1. **Clone the repository**:
+### Step-by-Step Installation
+
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/fintell-2.git
-   cd fintell-2
+   git clone https://github.com/being-souL1230/FinTell.git
+   cd FinTell
    ```
 
-2. **Install dependencies**:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Set up Environment Variables**:
-   Create a `.env` file in the root directory:
-   ```env
-   DATABASE_URL=postgresql://postgres:password@localhost:5432/fintell
-   JWT_SECRET=your_secret_key_here
-   ```
+3. Set up environment variables (see Section 6).
 
-4. **Run Database Migrations & Seed**:
+4. Run database migrations and seed demo data:
    ```bash
-   npx drizzle-kit push
+   npm run db:seed
    ```
 
-5. **Start the Development Server**:
+5. Start the development server:
    ```bash
    npm run dev
    ```
-   Open `http://localhost:3000` in your browser.
 
----
+6. Open your browser and navigate to `http://localhost:3000`.
 
-## 📝 Verification & Build Commands
+## 6. Environment Configuration
 
-- **Type Check**:
+Create a `.env` file in the project root directory with the following variables:
+
+```env
+DATABASE_URL="postgresql://username:password@ep-host.aws.neon.tech/neondb?sslmode=require"
+GROQ_API_KEY="your_groq_api_key_here"
+```
+
+## 7. Database Commands and Migrations
+
+- Generate new Drizzle migration from schema changes:
   ```bash
-  npm run typecheck
+  npm run db:generate
   ```
-- **Production Build**:
+
+- Run database migrations and seed default data:
   ```bash
-  npm run build
+  npm run db:seed
   ```
 
----
+- Push schema directly to database (development mode):
+  ```bash
+  npx drizzle-kit push
+  ```
 
-## 📄 License
+## 8. Project Folder Structure
 
-**Proprietary License (All Rights Reserved)**. Unauthorized copying, reproduction, modification, distribution, or commercial use of this codebase or software is strictly prohibited without explicit written permission. See [`LICENSE`](file:///d:/Projects/fintell-2/LICENSE) for more information.
+```
+fintell/
+├── drizzle/                   # Drizzle SQL migration files
+│   ├── 0000_...sql
+│   └── 0001_...sql
+├── src/
+│   ├── app/                   # Next.js App Router pages & API routes
+│   │   ├── api/               # REST API endpoints (auth, scams, lessons, ai)
+│   │   ├── dashboard/         # Dashboard pages (money, scams, learn, reconcile, etc.)
+│   │   ├── login/
+│   │   ├── register/
+│   │   └── onboarding/
+│   ├── components/            # UI components and feature modules
+│   │   ├── dashboard/         # VoiceScamSimulator, FraudChecker, DebtPayoffCalculator, etc.
+│   │   └── Header.tsx, Sidebar.tsx, UI libraries
+│   ├── db/                    # Drizzle database connection and schema definitions
+│   │   ├── index.ts
+│   │   ├── schema.ts
+│   │   └── seed.ts
+│   └── lib/                   # Utility functions, AI service, i18n, scoring engines
+├── public/                    # Static images, assets, and icons
+├── drizzle.config.json        # Drizzle ORM configuration
+├── next.config.ts             # Next.js configuration
+├── tsconfig.json              # TypeScript configuration
+└── package.json               # Dependencies and scripts
+```
+
+## 9. Security and Privacy Principles
+
+- Zero Credential Exposure: FinTell explicitly blocks and warns against sharing OTPs, UPI PINs, passwords, or full card numbers.
+- Self-Serve Account Erasure: Users have complete control to permanently delete their account and associated data.
+- Environment Secret Protection: API keys and database credentials are managed strictly via environment variables and excluded from source control.
+
+## 10. License
+
+Proprietary License (All Rights Reserved). Unauthorized copying, reproduction, distribution, or commercial use of this codebase or software is strictly prohibited without explicit written permission.
