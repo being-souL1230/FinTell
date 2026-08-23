@@ -59,9 +59,10 @@ export function Sidebar({ isAdmin, name, hasBusiness = false }: { isAdmin: boole
     { href: "/dashboard/progress", label: navLabel(lang, "nav.myProgress"), icon: Trophy, imgSrc: "/sidebar-icons/fintell-color-icon-my-progress.webp" },
   ];
 
-  const displayNavItems = hasBusiness
+  const displayNavItems = (hasBusiness || isAdmin)
     ? NAV_ITEMS
     : NAV_ITEMS.filter((item) => !["/dashboard/verify", "/dashboard/reconcile", "/dashboard/reports"].includes(item.href));
+
 
   const ADMIN_ITEMS = [
     { href: "/dashboard/admin", label: navLabel(lang, "nav.admin"), icon: Settings, imgSrc: "/sidebar-icons/fintell-color-icon-admin.webp", exact: true },

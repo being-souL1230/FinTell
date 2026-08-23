@@ -44,7 +44,8 @@ export default async function DashboardPage() {
     <DashboardClient
       userName={user.name}
       userXp={user.xp}
-      hasBusiness={user.hasBusiness}
+      hasBusiness={user.hasBusiness || user.role === "admin"}
+
       completedCount={completedCount}
       totalLessons={allLessons.length}
       completionPct={completionPct}
